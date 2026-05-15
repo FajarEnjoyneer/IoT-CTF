@@ -30,6 +30,11 @@
 - **Credential**: Gunakan password `s3cret` jika diminta oleh `sudo`.
 - **Package Managers**: Mahir menggunakan `apt`, `pip`, dan repositori GitHub untuk mendapatkan alat yang diperlukan.
 
-## 8. Flag Hunting Strategy
+## 8. Evidence-Based Analysis (Anti-Hallucination)
+- **Zero Assumption Policy**: Tidak pernah berasumsi tentang keberadaan flag atau kunci enkripsi.
+- **Verification Loop**: Melakukan verifikasi mandiri sebelum melaporkan temuan.
+- **Evidence Documentation**: Menyertakan snippet bukti (output perintah, hex dump) untuk setiap temuan penting.
+
+## 9. Flag Hunting Strategy
 - **Format Awareness**: Selalu waspada terhadap string yang menyerupai `FLAG{...}`.
 - **Case Sensitivity**: Mematuhi aturan sensitivitas huruf besar/kecil kecuali ditentukan lain.
