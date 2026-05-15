@@ -1,5 +1,3 @@
-import struct
-
 sbox = [
     0x63, 0x7c, 0x77, 0x7b, 0xf2, 0x6b, 0x6f, 0xc5, 0x30, 0x01, 0x67, 0x2b, 0xfe, 0xd7, 0xab, 0x76,
     0xca, 0x82, 0xc9, 0x7d, 0xfa, 0x59, 0x47, 0xf0, 0xad, 0xd4, 0xa2, 0xaf, 0x9c, 0xa4, 0x72, 0xc0,
@@ -19,45 +17,7 @@ sbox = [
     0x8c, 0xa1, 0x89, 0x0d, 0xbf, 0xe6, 0x42, 0x68, 0x41, 0x99, 0x2d, 0x0f, 0xb0, 0x54, 0xbb, 0x16
 ]
 
-def get_bit(val, bit):
-    return (val >> bit) & 1
-
-def dca_round10(table_data):
-    # table_data is 256 bytes
-    entries = list(table_data)
-    
-    best_key = 0
-    max_corr = 0
-    
-    for k in range(256):
-        corr_sum = 0
-        for target_bit in range(8): # bit of S-box output
-            for table_bit in range(8): # bit of table entry (1 byte now)
-                cnt = 0
-                for x in range(256):
-                    s_val = sbox[x ^ k]
-                    t_val = entries[x]
-                    if get_bit(s_val, target_bit) == get_bit(t_val, table_bit):
-                        cnt += 1
-                
-                corr = abs(cnt - 128)
-                if corr > corr_sum:
-                    corr_sum = corr
-        
-        if corr_sum > max_corr:
-            max_corr = corr_sum
-            best_key = k
-            
-    return best_key, max_corr
-
-with open("round10_tboxes.bin", "rb") as f:
-    data = f.read()
-
-key = []
-for i in range(16):
-    table_data = data[i*256 : (i+1)*256]
-    k, corr = dca_round10(table_data)
-    key.append(k)
-    print(f"Byte {i}: {k:02x} (corr: {corr})")
-
-print("Round 10 key:", "".join(f"{k:02x}" for k in key))
+target = 0x6f ^ 0x0b
+for k in range(256):
+    if sbox[k] ^ sbox[k ^ 1] == target:
+        print(f"k={k:02x}")
