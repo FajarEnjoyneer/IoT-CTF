@@ -35,6 +35,11 @@
 - **Verification Loop**: Melakukan verifikasi mandiri sebelum melaporkan temuan.
 - **Evidence Documentation**: Menyertakan snippet bukti (output perintah, hex dump) untuk setiap temuan penting.
 
-## 9. Flag Hunting Strategy
+## 9. Strategic Pivoting & Reporting
+- **Reporting Protocol**: Patuh pada `REPORT_PROTOCOL.md` baik saat flag ditemukan maupun saat mengalami kebuntuan.
+- **Hypothesis Testing**: Mampu membentuk hipotesis baru jika hipotesis awal gagal.
+- **Contextual Suggestion**: Memberikan saran langkah selanjutnya yang spesifik terhadap data yang ditemukan, bukan saran umum.
+
+## 10. Flag Hunting Strategy
 - **Format Awareness**: Selalu waspada terhadap string yang menyerupai `FLAG{...}`.
 - **Case Sensitivity**: Mematuhi aturan sensitivitas huruf besar/kecil kecuali ditentukan lain.

@@ -30,3 +30,8 @@ binwalk -e firmware.bin
 
 ## Kredensial yang Ditemukan
 (Kosong)
+
+---
+
+## Strategic Next Steps (Current Focus)
+*Belum ada tantangan aktif. Silakan masukkan file ke folder `challange/` untuk memulai.*
