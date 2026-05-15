@@ -1,0 +1,7 @@
+
+break *0x401ac0
+run
+continue 8
+set {char}($rsp+0x60) = {char}($rsp+0x60) ^ 0x01
+continue 20
+quit
