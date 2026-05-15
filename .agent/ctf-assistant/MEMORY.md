@@ -6,7 +6,7 @@ Semua tantangan berada di folder: `challange/`
 ## Daftar Tantangan & Status
 | ID | Nama Tantangan | Kategori | Status | Flag | Catatan |
 |---|---|---|---|---|---|
-| 01 | (Contoh) CAN Trace | Automotive | Belum Dimulai | - | Perlu candump log |
+| 02 | VIN-Hunter | Automotive | Selesai | flag{v1n_r3ad_succ3ss} | Berhasil direkonstruksi dari DID 0xF190 via ISO-TP |
 
 ## Temuan Penting (General)
 - **Flag Format**: `FLAG{...}` atau `flag{...}` (Case Sensitive).

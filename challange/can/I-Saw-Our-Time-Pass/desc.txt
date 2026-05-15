@@ -1,0 +1,5 @@
+I Saw Our Time Pass
+1000
+easy can steganography
+English
+The attached file is an ECU CAN communication log. Find the real flag in this challenge.

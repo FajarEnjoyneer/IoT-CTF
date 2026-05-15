@@ -1,0 +1,46 @@
+set confirm off
+target remote localhost:1234
+file kernel
+break *0x11fd1
+continue
+# Now at entry point.
+# Log output to a file
+set logging file gdb_output.txt
+set logging on
+
+echo "--- Registers ---
+"
+info registers
+
+echo "
+--- Disassembly at Entry Point ---
+"
+x/50i $pc  # Disassemble 50 instructions from PC
+
+echo "
+--- Stack Trace ---
+"
+bt
+
+echo "
+--- Stack Content (20 words) ---
+"
+x/20wx $sp
+
+echo "
+--- String at 0x14571 ('Input flag:') ---
+"
+x/s 0x14571
+
+echo "
+--- String at 0x1457e ('Correct!') ---
+"
+x/s 0x1457e
+
+echo "
+--- String at 0x14588 ('Wrong!') ---
+"
+x/s 0x14588
+
+set logging off
+quit

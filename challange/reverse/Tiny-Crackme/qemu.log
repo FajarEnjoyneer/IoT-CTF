@@ -1,0 +1,3 @@
+QEMU 6.2.0 monitor - type 'help' for more information
+(qemu) qemu-system-arm: -serial stdio: cannot use stdio by multiple character devices
+qemu-system-arm: -serial stdio: could not connect serial device to character backend 'stdio'
