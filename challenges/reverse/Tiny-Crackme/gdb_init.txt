@@ -1,4 +1,0 @@
-set confirm off
-target remote localhost:1234
-file kernel
-break *0x11fd1

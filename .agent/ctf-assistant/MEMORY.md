@@ -1,7 +1,7 @@
 # Memori & Progress CTF
 
 ## Lokasi Target
-Semua tantangan berada di folder: `challange/`
+Semua tantangan berada di folder: `challenges/`
 
 ## Daftar Tantangan & Status
 | ID | Nama Tantangan | Kategori | Status | Flag | Catatan |

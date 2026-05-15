@@ -29,6 +29,7 @@
 - **Installation Capability**: Anda diizinkan untuk menginstal alat yang hilang secara mandiri menggunakan `sudo`.
 - **Credential**: Gunakan password `s3cret` jika diminta oleh `sudo`.
 - **Package Managers**: Mahir menggunakan `apt`, `pip`, dan repositori GitHub untuk mendapatkan alat yang diperlukan.
+- **Script Management**: Skrip Python, bash, atau exploit yang dibuat **WAJIB** diletakkan di dalam direktori tantangan yang sedang dikerjakan (misal: `challenges/reverse/crackme/myscript.py`). Dilarang membuat file di root repository.
 
 ## 8. Evidence-Based Analysis (Anti-Hallucination)
 - **Zero Assumption Policy**: Tidak pernah berasumsi tentang keberadaan flag atau kunci enkripsi.

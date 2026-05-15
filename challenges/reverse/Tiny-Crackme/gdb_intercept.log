@@ -1,4 +1,0 @@
-Ignoring packet error, continuing...
-warning: unrecognized item "timeout" in "qSupported" response
-intercept.gdb:1: Error in sourced command file:
-Remote communication error.  Target disconnected.: Connection reset by peer.
